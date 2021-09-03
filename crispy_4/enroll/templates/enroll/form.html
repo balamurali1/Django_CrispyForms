@@ -1,0 +1,9 @@
+{% extends 'enroll/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<h1>Custom Form</h1>
+	<h5>(This Form is Created througth Django)</h5>
+  {% crispy form %}
+{% endblock %}
