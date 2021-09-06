@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+	<style>
+		.helptext{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<h3>Student Registration</h3>
+	{% for i in fm %}
+	{{i.label_tag}}
+	{{i}}
+	{% endfor %}
+	<hr><hr>
+
+	{{fm}}
+
+	<hr><hr>
+
+
+</body>
+</html>
