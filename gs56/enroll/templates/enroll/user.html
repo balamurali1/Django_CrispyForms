@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+</head>
+<body>
+	<center>
+		<pre>
+			<form action="" method="POST">
+				{% csrf_token %}
+				<h4><u>Registration Form</u></h4>
+				{{form.as_p}}
+	<input type="submit" value="Submit">
+			</form>
+		</pre>
+	</center>
+	
+
+</body>
+</html>
