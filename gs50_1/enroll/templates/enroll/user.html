@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Info</title>
+</head>
+<body>
+	<h3>Student Registration</h3>
+		{% for field in form %}
+			{{field.label_tag}}
+			{{field}}
+		{% endfor %}	
+	<hr><hr>
+
+	{% for field in form.visible_fields %}
+		{{field.label_tag}}
+	{% endfor %}
+	<hr><hr>
+
+	{% for field in form.visible_fields %}
+		{{field.label_tag}}
+		{{field}}
+	{% endfor %}
+	<hr><hr>
+	
+	{% for hidden in form.hidden_fields %}
+		{{hidden}}
+	{% endfor %}
+	<hr><hr>
+
+</body>
+</html>
