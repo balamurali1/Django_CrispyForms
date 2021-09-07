@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<center>
+		<pre>
+			<form action="" method="POST" novalidate>
+				<h2><u>Registration Form</u></h2>
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type="submit" value="Submit">
+			</form>
+		</pre>
+	</center>
+	
+
+		
+</body>
+</html>
