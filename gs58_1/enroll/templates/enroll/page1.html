@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page1</title>
+</head>
+<body>
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" value="Login" name="logpage">
+		<input type="submit" value="Singup" name="signpage">
+	</form>
+		
+</body>
+</html>
