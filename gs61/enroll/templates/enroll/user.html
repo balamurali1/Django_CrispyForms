@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+</head>
+<body>
+	<form action="" method="POST">
+		 {% csrf_token %}
+		<center><h4>Student Info</h4></center>
+		<center><h5><u>Built-in validators</u></h5></center>
+		<center>{{form.as_p}}</center>
+		<center><input type="submit" name="" value="Submit"></center>
+		<center><span>MaxLengthValidator:Maxlength 10 anukondi,ante 10 kante thakuva undavachunu kani 10 kante  ekkuva undakudadu.. </span></center>
+		<center><span>MinLengthValidator:Minlength 5 anukondi,ante 5 kante thakuva undakudadu kani 5 kante  ekkuva undavachunu..</span></center>
+	</form>
+
+</body>
+</html>
