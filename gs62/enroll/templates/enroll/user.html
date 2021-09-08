@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password</title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<center><h4><u>Password Matching process</u></h4></center>
+		<center><table>{{form.as_table}}</table></center>
+		<center><pre><input type="submit" name="" value="Submit"></center></pre>
+	</form>
+
+</body>
+</html>
