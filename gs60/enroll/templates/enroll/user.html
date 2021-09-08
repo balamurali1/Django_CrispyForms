@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<table>{{form.as_p}}</table>
+		<input type="submit" name="" value="Submit">
+	</form>
+		
+
+</body>
+</html>
