@@ -1,13 +1,23 @@
 {% extends 'enroll/base.html' %}
 
 {% block content %}
-	<center><pre>
+	<!-- <center><pre>
 		<form method="post">
     		{% csrf_token %}
     		<table>{{ form.as_table }}</table>
     		<button type="submit" class="btn btn-warning">Sign in</button>
  		 </form>	
-	</center></pre>
+	</center></pre> -->
+
+
+	<form method="post">
+    	{% csrf_token %}
+    	<center><h4>Student Info</h4></center>
+    	<center><table>{{ form.as_table }}</table></center>
+    	<center><button type="submit" class="btn btn-warning">Sign in</button></center>
+ 	</form>
+
+
   
 {% endblock %}
 
