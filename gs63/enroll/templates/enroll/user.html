@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<style>
+		.errorlist{
+			list-style-type:none; 
+			color:blue;
+			font-size:15px;
+			margin: 0;
+			padding: 0; 
+		}
+	</style>
+
+</head>
+<body>
+	<form method="POST" novalidate>
+		{% csrf_token %}
+		<center><h4>Student Info</h4></center>
+		<center><h5><u>error messages</u></h5></center>
+		<center>{{form.as_p}}</center>
+		<center><input type="submit" name="" value="Submit"></center>
+	</form>
+	
+</body>
+</html>
