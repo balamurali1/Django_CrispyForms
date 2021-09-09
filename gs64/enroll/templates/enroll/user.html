@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+	<style>
+		.errorlist{
+			list-style-type:none;
+			color: blue;
+			margin: 1;
+			padding: 1;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="POST" novalidate>
+		{% csrf_token %}
+		<center><h4><u>Student Info</u></h4></center>
+		<center><table>{{form.as_p}}</table></center>
+		<center><input type="submit" name="" value="Submit"></center>
+	</form>
+
+</body>
+</html>
