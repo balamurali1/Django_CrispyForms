@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<style>
+		.errorlist{
+			list-style-type:none;
+			color: blue;
+			margin: 1;
+			padding: 1;
+		}
+	</style>
+</head>
+<body>
+	<!-- <form method="POST" novalidate>
+		{% csrf_token %}
+		<h4>Student Info</h4>
+		{{form.non_field_errors}}
+		{% for field in form %}
+			{{field.label_tag}} {{field}} 
+		{% endfor %}
+		<input type="submit" name="" value="Submit">
+	</form> -->
+
+	<!-- <form method="POST" novalidate>
+		{% csrf_token %}
+		<h4>Student Info</h4>
+		{{form.non_field_errors}}
+		{% for field in form %}
+				<div>
+					{{field.label_tag}} {{field}} {{field.errors}}
+				</div>
+			 
+		{% endfor %}
+		<input type="submit" name="" value="Submit">
+		
+	</form> -->
+
+
+	<!-- <form method="POST" novalidate>
+		{% csrf_token %}
+		<h4>Student Info</h4>
+		{{form.non_field_errors}}
+		{% for field in form %}
+				<div>
+					{{field.label_tag}} {{field}} {{field.errors|striptags}}
+				</div>
+			 
+		{% endfor %}
+		<input type="submit" name="" value="Submit">
+		
+	</form> -->
+
+
+	<!-- <form method="POST" novalidate>
+		{% csrf_token %}
+		<h4>Student Info</h4>
+		{{form.non_field_errors}}
+		{% for field in form %}
+				<div>
+					{{field.label_tag}} {{field}} <span class="errorlist">{{field.errors|striptags}}</span>
+				</div>
+			 
+		{% endfor %}
+		<input type="submit" name="" value="Submit">
+		
+	</form> -->
+
+	<form method="POST" novalidate>
+		{% csrf_token %}
+		<h4>Student Info</h4>
+		{{form.non_field_errors}}
+		{% for field in form %}
+				<div>
+					{{field.label_tag}} {{field}} 
+					{% for error in field.errors %}
+						<span class="errorlist">{{error}}</span>
+					{% endfor %}
+				</div>
+			 
+		{% endfor %}
+		<input type="submit" name="" value="Submit">
+		
+	</form>
+	
+</body>
+</html>
+
+<!--{{field.label_tag}} idi vachesi label tag's antaru,like Name,Email,Password..etc-->
+<!-- {{field}} idi vachesi input type(dabba) antaru-->
+<!-- {{field.errors}} idi vachesi error's ni chupisthundi  -->
+<!-- |striptags idi vachesi error's ni 'dabba pakkana' vasthundi. -->
+<!-- {{field.errors|striptags}} dinini <span> tag lo kuda pettukovachunu.... -->
+<!-- {{field.errors}} idi ni ni ela rashanu {% for error in field.errors %}
+											<span class="errorlist">{{error}}</span>
+											{% endfor %}  ela rasthe old messages,raboyee messages chupisthundi..-->
