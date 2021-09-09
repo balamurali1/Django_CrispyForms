@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<center><h4><u>Student Info</u></h4></center>
+		<center><table>{{form.as_table}}</table></center>
+		<center><pre><input type="submit" name="" value="Submit"></pre></center>
+		
+	</form>
+
+</body>
+</html>
