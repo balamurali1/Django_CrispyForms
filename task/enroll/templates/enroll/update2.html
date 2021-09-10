@@ -1,0 +1,11 @@
+{% extends "enroll/base.html" %}
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<br><br>
+ 		{{ form.as_table }}
+		
+		<input type="submit" name="" value="Update marks">
+	</form>
+	
+{% endblock %}

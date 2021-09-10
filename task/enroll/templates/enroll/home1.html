@@ -1,0 +1,22 @@
+{% extends "enroll/base.html" %}
+{% block content %}
+	<h2>Student Information</h2>
+	<a href="/api/student">Create Student</a>
+	<table border="2"> 
+		<tr>
+			<th>Name</th>
+			<th>Roll_Number</th>
+			<th>Date of Birth</th> 
+			<th>Operations</th>
+		</tr>
+		{% for car in data %}
+		<tr>
+			<td>{{car.name }}</td>
+			<td>{{car.roll_number }}</td>
+			<td>{{car.date_of_birth}}</td>
+			<td><a href="/api/student_update/{{car.id}}">UPDATE</a>||<a href="/api/stu1/">Marks Update</a>
+		</tr>
+		{% endfor %}
+	</table>
+
+{% endblock %}
