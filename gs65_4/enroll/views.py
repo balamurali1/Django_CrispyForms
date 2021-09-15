@@ -12,6 +12,8 @@ def showinfo(request):
 	# 		em = fm.cleaned_data['email']
 	# 		pw = fm.cleaned_data['password']
 
+#Add data(instance/object(record))..
+
 	# 		reg = models.User(name=nm,email=em,password=pw)
 	# 		reg.save()
 
