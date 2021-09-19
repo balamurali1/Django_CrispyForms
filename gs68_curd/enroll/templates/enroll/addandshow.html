@@ -1,0 +1,19 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<form action="" method="POST">
+	{% csrf_token %}
+	<center>
+		<h4><u>Add New Student</u></h4>
+		
+		<br>
+
+		<table>{{form.as_table}}</table>
+		<br>
+		<input type="submit" name="" value="Add">
+
+	</center>
+	
+	
+</form>
+{% endblock content %}
