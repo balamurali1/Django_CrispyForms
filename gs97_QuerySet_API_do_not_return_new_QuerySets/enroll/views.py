@@ -7,7 +7,7 @@ def home(request):
 
 ############### get() ################
 
-	#student_data = Student.objects.get(pk=1)
+	student_data = Student.objects.get(pk=1)
 		#(OR)
 	#student_data = Student.objects.get(id=1)
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- {% if nm %}
+	<h3>Hello {{nm}}</h3>
+	{% endif %}	 -->
+
+<!-- and opretator -->
+
+	<!-- <h3>Example8.1</h3>
+	{% if nm and st %}
+	<h3>{{st}} sets are available for {{nm}} course </h3>
+	{% endif %} -->
+
+<!-- or operator -->
+	<!-- <h3>Example8.2</h3>
+	{% if nm or st %}
+	<h3>{{st}} sets are available for {{nm}} course </h3>
+	{% endif %} -->
+
+<!-- not operator -->
+	<!-- <h3>Example8.3</h3>
+	{% if not st %}
+	<h3>Set not available </h3>
+	{% endif %} -->
+
+
+<!-- == operator  -->
+	<!-- <h3>Example8.4</h3>
+	{% if nm == 'Django' %}
+	<h3>Hello {{nm}} </h3>
+	{% endif %} -->
+
+<!-- ==,and -->
+	<!-- <h3>Example8.5</h3>
+	{% if nm == 'Django' and st == 5 %}
+	<h3>{{st}}sets are available for {{nm}} course </h3>
+	{% endif %} -->
+
+	<!-- <h3>Example8.5.1</h3>
+	{% if nm == 'Django' and st == 6 %}
+	<h3>{{st}}sets are available for {{nm}} course </h3>
+	{% endif %} -->
+
+<!-- ==,or  -->
+	<!-- {% if nm == 'Django' or st == 6 %}
+	<h3>{{st}}sets are available for {{nm}} course </h3>
+	{% endif %} -->
+
+<!-- not,== -->
+	<!-- {% if not st == 7 %}
+	<h3>sets not available </h3>
+	{% endif %}
+ -->
+
+<!-- length filter -->
+	<!-- {% if nm|length >= 4  %}
+	<h3>Hello {{nm}} </h3>
+	{% endif %} -->
+
+
+<!-- if  else conditions -->
+	<!-- {% if nm %}
+	<h3>Hi {{nm}} </h3>
+	{% else %}
+	<h3>No course Available</h3>
+	{% endif %} -->
+
+<!-- if,else, ==  -->
+	<!-- {% if nm == 'Django' %}
+	<h3>Hi {{nm}} </h3>
+	{% else %}
+	<h3>No course Available</h3>
+	{% endif %} -->
+
+
+<!-- if,elif,else -->
+
+	<!-- {% if nm %}
+	<h3>Hi {{nm}} </h3>
+	{% elif st %}
+	<h3>Sets {{st}}</h3>
+	{% else %}
+	<h3>No course Available</h3>
+	<h3>No sets Available</h3>
+	{% endif %} -->
+
+
+<!--if,elif,else,==  -->
+	
+	<!-- {% if nm == "Django" %}
+	<h3>Hi {{nm}} </h3>
+	{% elif st == 5 %}
+	<h3>Sets {{st}}</h3>
+	{% else %}
+	<h3>No course Available</h3>
+	<h3>No sets Available</h3>
+	{% endif %} -->
+
+
+<!--for loop  -->
+	<!-- {% for nm in names %}
+	{{nm}}
+	{% endfor %} -->
+
+
+	<!-- {% for nm in names %}
+	{{nm}}<br>
+	{% endfor %} -->
+
+
+	<!-- <ul>
+		{% for nm in names %}
+		<li>{{nm}}</li>
+		{% endfor %}	
+	</ul> -->
+
+
+	<!-- <ul>
+		{% for nm in names reversed %}
+		<li>{{nm}}</li>
+		{% endfor %}	
+	</ul> -->
+
+
+<!-- for,empty -->
+	<!-- <ul>
+		{% for nm in names %}
+		<li>{{nm}}</li>
+		{% empty %}
+		<h3>Yaha Kuch nahi hai</h3>
+		{% endfor %}	
+	</ul> -->
+
+
+<!-- forloop.conuter -->
+	
+	<!-- {% for nm in names %}
+	{{forloop.counter}} {{nm}} <br>
+	{% endfor %} -->
+
+
+	<!-- {% for nm in names %}
+	{{forloop.counter0}} {{nm}} <br>
+	{% endfor %} -->
+
+<!-- forloop.first -->
+
+	<!-- {% for nm in names %}
+	{{forloop.first}} {{nm}} <br>
+	{% endfor %} -->
+
+<!-- forloop.last -->
+
+	<!-- {% for nm in names %}
+	{{forloop.last}} {{nm}} <br>
+	{% endfor %} -->
+
+
+<!-- forloop.recounter -->
+
+	<!-- {% for nm in names %}
+	{{forloop.revcounter}} {{nm}} <br>
+	{% endfor %} -->
+
+
+	<!-- {% for nm in names %}
+	{{forloop.revcounter0}} {{nm}} <br>
+	{% endfor %}
+ -->
+
+<!-- dictionary -->
+ 	<!-- <h4>{{student}}</h4>
+ 	<h4>{{student.stu1}}</h4>
+ 	<h4>{{student.stu2}}</h4>
+ 	<h4>{{student.stu3}}</h4>
+ 	<h4>{{student.stu4}}</h4>
+ 	<h4>{{student.stu1.name}}</h4>
+ 	<h4>{{student.stu1.roll}}</h4>
+ 	<h4>{{student.stu2.name}}</h4>
+ 	<h4>{{student.stu2.roll}}</h4>
+ 	<h4>{{student.stu3.name}}</h4>
+ 	<h4>{{student.stu3.roll}}</h4>
+ 	<h4>{{student.stu4.name}}</h4>
+ 	<h4>{{student.stu4.roll}}</h4> -->
+ 	
+
+<!--forloop key,value  -->
+	<!-- {% for key,value in data.items %}
+	{{key}} = {{value}}
+	{% endfor %} -->	
+
+
+
+<!-- forloop data dictionary -->
+	
+	<!-- {% for key,value in data.items %}
+	{{key}}<br>
+	{% endfor %} -->
+
+
+	<!-- {% for key,value in data.items %}
+	{{key}} = {{value}}<br>
+	{% endfor %} -->
+
+
+	<!-- {% for key,value in data.items %}
+	{{key}}={{value}}<br>
+	{% for key,value in value.items %}
+	{{key}} = {{value}}<br>
+	{% endfor %}
+	{% endfor %} -->
+
+
+	{% for key,value in data.items %}
+	{{key}}={{value}}<br>
+	{% for key,value in value.items %}
+	{{forloop.parentloop.counter}} {{key}} = {{value}}<br>
+	{% endfor %}
+	{% endfor %}	
+
+
+
+</body>
+</html>
