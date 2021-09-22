@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Studetn Info</title>
+
+	<style>
+		table,th,tr,td{
+			border:1px solid black
+		}
+		th{
+			color: yellow;
+			background: #1abc9c;
+
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<h3>Student Information</h3>
+		<table>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Roll</th>
+			<th>City</th>
+			<th>Marks</th>
+			<th>Passdate</th>
+			<th>Admdatetime</th>
+			{% for stu in student %}
+				<tr>
+					<td>{{stu.id}}</td>
+					<td>{{stu.name}}</td>
+					<td>{{stu.roll}}</td>
+					<td>{{stu.city}}</td>
+					<td>{{stu.marks}}</td>
+					<td>{{stu.passdate}}</td>
+					<td>{{stu.admdatetime}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+		
+	</center>
+	
+
+
+</body>
+</html>
