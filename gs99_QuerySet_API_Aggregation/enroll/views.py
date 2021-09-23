@@ -33,6 +33,10 @@ def home(request):
 				'count':count}
 
 	print(average)
+	print(total)
+	print(minimum)
+	print(maximum)
+	print(count)
 	print('Reutrn:',student_data)
 	print()
 	print('SQL Query:',student_data.query)
