@@ -2,7 +2,7 @@ from django.shortcuts import render
 from enroll.models import Student
 from django.db.models import Avg,Sum,Min,Max,Count
 
-# Create your views here.
+# Create your views here
 
 def home(request):
 
