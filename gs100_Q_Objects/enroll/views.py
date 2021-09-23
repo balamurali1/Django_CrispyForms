@@ -31,6 +31,8 @@ def home(request):
 	
 	############## ~ (Negation Operator) ################
 
+#Note: ~ (Negation Operator) it is particular record not visible in the table
+
 	student_date = Student.objects.filter(~Q(id =3))
 
 	#student_date = Student.objects.filter(~Q(id =1))
