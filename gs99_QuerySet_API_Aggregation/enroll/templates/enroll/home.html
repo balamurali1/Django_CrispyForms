@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aggregation</title>
+	<style>
+		table,th,td,tr{
+			border: 1px solid yellow;
+		}
+		
+	</style>
+</head>
+<body>
+	<center>
+		<h3><u>Student Aggegation</u></h3>
+		<h4>{{data}} Marks Aggregation Process</h4>
+		<table>
+			<th>ID</th> 
+			<th>Name</th>
+			<th>Roll</th>
+			<th>City</th>
+			<th>Marks</th>
+			<th>Passdate</th>
+			<th>AdmDateTime</th>
+			{% for stu in student %}
+				<tr>
+					<td>{{stu.id}}</td>
+					<td>{{stu.name}}</td>
+					<td>{{stu.roll}}</td>
+					<td>{{stu.city}}</td>
+					<td>{{stu.marks}}</td>
+					<td>{{stu.passdate}}</td>
+					<td>{{stu.admdatetime}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+		<div>
+			<h4>1)Average Data {{average}}</h4>
+			<h4>Average = {{average.marks__avg}}</h4>
+		</div>
+
+		<div>
+			<h4>2)Sum Data {{total}}</h4>
+			<h4>Sum = {{total.marks__sum}}</h4>
+		</div>
+
+		<div>
+			<h4>3)Mini Data {{minimum}}</h4>
+			<h4>Min = {{minimum.marks__min}}</h4>
+		</div>
+
+		<div>
+			<h4>4)Max Data {{maximum}}</h4>
+			<h4>Max = {{maximum.marks__max}}</h4>
+		</div>
+
+		<div>
+			<h4>5)Count Data {{count}}</h4>
+			<h4>Count = {{count.marks__count}}</h4>
+		</div>
+	</center>
+</body>
+</html>
