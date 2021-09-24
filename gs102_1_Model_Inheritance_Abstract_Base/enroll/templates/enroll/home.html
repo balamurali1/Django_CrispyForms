@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Items</title>
+	<style>
+		table,th,tr,td{
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<hr>First<hr>
+		<table>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Created</th>
+			<th>Updated</th>
+			<th>Content</th>
+			{% for A in a %}
+				<tr>
+					<td>{{A.id}}</td>
+					<td>{{A.title}}</td>
+					<td>{{A.created}}</td>
+					<td>{{A.updated}}</td>
+					<td>{{A.content}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+		<hr>Second<hr>
+
+		<table>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Created</th>
+			<th>Updated</th>
+			<th>File</th>
+			{% for B in b %}
+				<tr>
+					<td>{{B.id}}</td>
+					<td>{{B.title}}</td>
+					<td>{{B.created}}</td>
+					<td>{{B.updated}}</td>
+					<td>{{B.file}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+
+		<hr>Third<hr>
+
+		<table>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Created</th>
+			<th>Updated</th>
+			<th>File</th>
+			{% for C in c %}
+				<tr>
+					<td>{{C.id}}</td>
+					<td>{{C.title}}</td>
+					<td>{{C.created}}</td>
+					<td>{{C.updated}}</td>
+					<td>{{C.file}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+
+		<hr>Fourth<hr>
+
+		<table>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Created</th>
+			<th>Updated</th>
+			<th>Slug</th>
+			{% for D in d %}
+				<tr>
+					<td>{{D.id}}</td>
+					<td>{{D.title}}</td>
+					<td>{{D.created}}</td>
+					<td>{{D.updated}}</td>
+					<td>{{D.slug}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+	</center>
+
+</body>
+</html>
