@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multi-table</title>
+	<style>
+		table,th,tr,td{
+			border: 2px solid green;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h4>Multi-Table(one to one Relations)</h4>
+		<table>
+			<h4>Examcenter Details</h4>
+			<th>ID</th>
+			<th>Center Name</th>
+			<th>City</th>
+			{% for e in ex %}
+				<tr>
+					<td>{{e.id}}</td>
+					<td>{{e.cname}}</td>
+					<td>{{e.city}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+		<br><br><br>
+
+		<table>
+			<h4>Student Details</h4>
+			<th>ID</th>
+			<th>Student Name</th>
+			<th>Roll</th>
+			{% for s in stu %}
+				<tr>
+					<td>{{s.id}}</td>
+					<td>{{s.name}}</td>
+					<td>{{s.roll}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+	</center>
+
+</body>
+</html>
