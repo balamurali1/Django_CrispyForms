@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extra Manager</title>
+	<style>
+		table,th,tr,td{
+			border: 1px solid pink;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h3>Add Extra Managers Methods</h3>
+		<table>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Roll</th>
+			{% for stu in student %}
+				<tr>
+					<td>{{stu.id}}</td>
+					<td>{{stu.name}}</td>
+					<td>{{stu.roll}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+	</center>
+
+</body>
+</html>
