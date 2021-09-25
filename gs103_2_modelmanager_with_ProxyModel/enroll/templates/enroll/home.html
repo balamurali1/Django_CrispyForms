@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proxy Model</title>
+	<style>
+		table,th,tr,td{
+			border: 1px solid orange;
+
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h4><u>This table will work with both Student and ProxyModel</u></h4>
+		<table>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Roll</th>
+			{% for stu in student %}
+				<tr>
+					<td>{{stu.id}}</td>
+					<td>{{stu.name}}</td>
+					<td>{{stu.roll}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+	</center>
+
+</body>
+</html>
