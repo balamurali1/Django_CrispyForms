@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-#Note:proxy ante ne Base class,chaild class Behaviours same untai.base class yooka 
+#Note:proxy ante ne Base class,chaild class Behaviours(data ni artham) same untai.base class yooka 
 	#filed's chaild class ki apply auvthai.
 
 
@@ -31,10 +31,10 @@ create auvthundi..
 ''' 
 
 '''
-Note:proxy model use echinappudu tables gani data base lo gani same to same to "data" vasthai
+Note:proxy model use echinappudu tables lo gani data base lo gani same to same to "data" vasthai
 parent table lo enter chesthe data automatice ga chaild table lo kuda data same vasthundi
 chaild table lo enter chesthe data automatice ga parent table lo kuda data same vasthundi
-" it is opposite process". each and every column same to same data vasthundi
+" it is opposite process". each and every column lo same to same data vasthundi
 
 
 Note: chaild table lo matrame data anedi different order lo ravali ante order chane cheyali.

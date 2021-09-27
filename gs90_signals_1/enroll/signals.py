@@ -20,6 +20,12 @@ user_logged_in.connect(login_success,sender = User) #This is "Manual Connect Rou
 '''
 
 '''
+sender = User,ikkada User anedi  class okay na... user table by default ga untundi kabbati create cheyavalasina auvsaram ledu model.py lo.
+kavali anukunte new tables ni models.py lo create chesukoo sender= xxx, ikkada echukoo.
+'''
+
+
+'''
 Note:
 	Here:
 	    user_logged_in= Dinini signal antaru

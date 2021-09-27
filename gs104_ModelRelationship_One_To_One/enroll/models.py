@@ -12,6 +12,12 @@ class Page(models.Model):
 	page_publish_date = models.DateField()
 
 
+'''
+Note: User ni delete chesthe daniki related records ani delete auvthai Page table lo okay na..
+
+ippudu opposite direction lo chusthe Page table lo unde record ni delete chesthe
+daniki related unna 'User record' anedi delete kadu.. idi anthey..
+'''
 
 '''
 Note:ikkada by default ga User table anedi django ne esthundi.kabatti manamu create cheyaledu
