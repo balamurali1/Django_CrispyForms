@@ -5,6 +5,12 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+'''
+NOte: ikkada Function Based view lo yela rasthamu code ni,class Based view lo
+yela rasthamu code ni ekkada 'differences' chudu. Objserve cheai okay...
+'''
+
+
 ###################### Template process ################
 
 def homefun(request): #This is Function based view.indulo get anedi by default ga untundi.
@@ -19,11 +25,12 @@ class HomeClassView(View):
 	def get(self,request):
 		return render(request,'enroll/class.html')
 
-################### context procee ##################################		
+################### context process ##################################		
 
 def about(request): #function Based context
 	context = {'msg':'Welcome to Python & Django developers'}
 	return render(request,'enroll/about.html',context = context)
+
 
 class AboutClassView(View): #class Based context
 	def get(self,request):
@@ -32,8 +39,10 @@ class AboutClassView(View): #class Based context
 
 
 ################### Forms ############################		
+	
+	#Function based views lo  Form ni ela rasthamu kada..
 
-def contactfun(request): #Function based Form
+def contactfun(request): 
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
@@ -48,7 +57,9 @@ def contactfun(request): #Function based Form
 			
 
 
-class ConntactFormView(View): #Class Based Form
+		#Class Based views  lo Form ni ela rasthamu okay na...
+
+class ConntactFormView(View): 
 	def get(self,request):  #form ni fill cheyakunda submit kodithey,getmethod dwara vachi ee code execute auvthundi
 		form = ContactForm()
 		return render(request,'enroll/contactclass.html',{'form':form})
