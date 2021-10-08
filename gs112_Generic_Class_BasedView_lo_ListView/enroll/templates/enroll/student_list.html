@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ListView</title>
+	<style>
+		table,th,tr,td{
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<h4><u>Generic class BasedView Topic lo "ListView"</u></h4>
+		<table>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Roll</th>
+			<th>Course</th>
+			{% for stu in student_list %}
+				<tr>
+					<td>{{stu.id}}</td>
+					<td>{{stu.name}}</td>
+					<td>{{stu.roll}}</td>
+					<td>{{stu.course}}</td>
+				</tr>
+			{% endfor %}	
+		</table>
+	</center>	
+
+</body>
+</html>
