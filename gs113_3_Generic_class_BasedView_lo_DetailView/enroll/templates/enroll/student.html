@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details</title>
+	<style>
+		table,th,td,tr{
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<h4>Generic class Based View DetailView</h4>
+	{{student.id}}
+	{{student.name}}
+	{{student.roll}}
+	{{student.course}}<br><br>
+	<a href="{% url 'studentlist'%}">Go To Student page</a>
+	<hr>
+	<table>
+			{% for stu in all %}
+				<tr>
+					<td>
+						<li><a href="{% url 'studentdetail' stu.id %}">{{stu.name}}</a></li>
+					</td>
+				</tr>
+			{% endfor %}	
+		</table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student ListView</title>
+	<style>
+		table,th,td,tr{
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<table>
+			{% for stu in student_list %}
+				<tr>
+					<td>
+						<li><a href="{% url 'studentdetail' stu.id %}">{{stu.name}}</a></li>
+					</td>
+				</tr>
+			{% endfor %}	
+		</table>
+</body>
+</html>
