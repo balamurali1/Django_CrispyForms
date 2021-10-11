@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html>
+<head>
+	<title>FormView</title>
+</head>
+<body>
+	<center>
+		<form action="" method="POST">
+			{% csrf_token %}
+			<table>{{form.as_table}}</table>
+			<input type="submit" name="" value="send">
+		</form>
+		<a href="{% url 'contact1'%}">Go To Contact1 page</a>
+			
+	</center>
+</body>
+</html>
