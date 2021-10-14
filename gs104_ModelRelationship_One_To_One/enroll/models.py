@@ -12,6 +12,7 @@ class Page(models.Model):
 	page_publish_date = models.DateField()
 
 
+
 '''
 Note: User ni delete chesthe daniki related records ani delete auvthai Page table lo okay na..
 
@@ -29,9 +30,12 @@ cheyakudadu adi thisukodu kuda..
 limit_choices_to={'is_staff':True}: Diniki artham vachesi is_staff unna valla list matrame page table lo unde
 user field lo kanapadali ani artham.
 
-Note:primary_key=True,ante Foreignkey ani artham.primary_key anedi User ane table lo unde
+
+Note:primary_key=True ani echina euvaka poina by default ga yee table aina database table lo first column ga thisukuntundi.
+
+primary_key=True,ante Foreignkey ani artham.primary_key anedi User ane table lo unde
 first column ni primary key antaru.Page ane class lo ki vasthundi
-kabbati danini internal ga foreignkey ani pilusthamu. rasedemo primary_key=True ani rasthamu.
+kabbati danini internal ga foreignkey ani pilusthamu.
 
 on_delete=models.CASCADE: Diniki artham vachesi User table lo unde record ni delete chesthe automatic ga
 haa record ku related unna page table lo unde record kuda delete auvthundi.
