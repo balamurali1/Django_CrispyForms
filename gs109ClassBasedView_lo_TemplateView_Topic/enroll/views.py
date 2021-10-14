@@ -25,7 +25,7 @@ class PageTemplateView(TemplateView):  #ikkada 'super()' vachesi PageTemplateVie
 
 	
 
-class ExTemplateView(TemplateView):  #ikkada 'super()' vachesi PageTemplateView class okay na..
+class ExTemplateView(TemplateView):  #ikkada 'super()' vachesi ExTemplateView class okay na..
 	template_name = 'enroll/extra.html'	
 
 	def get_context_data(self,**kwargs):
