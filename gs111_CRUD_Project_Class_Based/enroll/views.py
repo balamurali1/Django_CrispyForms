@@ -11,7 +11,7 @@ class UserAddShowView(TemplateView): #TemplateView ante create cheyadaniki use c
 		#--------- get() process --------------
 	template_name = 'enroll/addandshow.html'
 	def get_context_data(self,*args,**kwargs):
-		context = super().get_context_data(**kwargs)
+		context = super().get_context_data(**kwargs) #ikkada super() vachesi,UserAddShowView ani artham.
 		fm = StudentRegistration()  #ikada blank form chupisthundi.
 		stud = User.objects.all()
 		context = {'stu':stud,'form':fm}
