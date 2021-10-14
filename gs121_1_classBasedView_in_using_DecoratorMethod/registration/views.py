@@ -37,7 +37,7 @@ try chesthu undali "StaffTemplateView" ni
 '''
 						#(OR)
 
-@method_decorator(login_required,name='dispatch') #single line lo dinini rayavachunu...
+@method_decorator(login_required,name='dispatch') #simple ga single line lo dinini rayavachunu...
 class ProfileTemplateView(TemplateView):
 	template_name = 'registration/profile.html'
 
@@ -51,6 +51,12 @@ class AboutTemplateView(TemplateView):
 class StaffTemplateView(TemplateView):
 	template_name = 'registration/staff.html'
 
+
+
+'''
+Note: admin.site lo staff dhagara 'Tick(True)',mark add chesthu remove chesthu,
+try chesthu undali "StaffTemplateView" ni
+'''
 	
 
 
