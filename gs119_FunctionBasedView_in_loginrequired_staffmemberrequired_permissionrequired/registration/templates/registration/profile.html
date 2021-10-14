@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<center>
+		<h3>I am a Profile page</h3>
+		<h4>Logout Your Page:<a href="{% url 'logout' %}">Logout Button</a></h4>
+		<h4>Change Your Password:<a href="{% url 'password_change' %}">Change Password</a></h4>
+
+		<h4>Go Back to Home Page:<a href="{% url 'login' %}">Go To Home</a></h4>
+		<!-- Note: logout,password-change...etc anedi by default ga django code rasi pettinaru okay na -->
+	</center>
+</body>
+</html>

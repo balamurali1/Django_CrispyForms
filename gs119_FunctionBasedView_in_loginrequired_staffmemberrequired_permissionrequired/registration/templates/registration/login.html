@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Authentication</title>
+</head>
+<body>
+	<center>
+		<form action="" method="POST" novalidate>
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="Login">
+			<h4>Are You Forgotted Your password please Rest password: <a href="{% url 'password_reset' %}">Reset Password</a></h4>
+			
+		</form>
+
+	</center>
+	
+
+</body>
+</html>
