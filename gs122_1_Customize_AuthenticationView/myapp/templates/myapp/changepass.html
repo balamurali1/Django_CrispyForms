@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Password</title>
+</head>
+<body>
+	<center>
+		<!-- <form action="" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="" value="Save">
+			<a href="{% url 'dashboard' %}">Cancle</a>
+		</form> -->
+
+
+
+		<h3>Change Password </h3>
+	<form action="" method="POST" novalidate>
+		{% csrf_token %}
+		{% for fm in form %}
+			<div>
+				{{fm.label_tag}} {{fm}} <small>{{fm.errors|striptags}}</small>
+			</div><br>
+		{% endfor %}
+		<input type="submit" name="" value="Save">
+		<a href="{% url 'dashboard' %}">Cancle</a>
+		{% if form.non_field_errors %}
+			{% for error in form.non_field_errors %}
+				<p>{{error}}</p>
+			{% endfor %}
+		{% endif %}
+	</form>
+	</center>
+
+</body>
+</html>
