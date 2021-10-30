@@ -1,5 +1,5 @@
 from django.urls import path,register_converter
-from enroll import views, converters
+from api import views, converters
 
 register_converter(converters.FourDigitYearConverter,'yyyy') #yyyy(custom path) palce lo yedaina rasuko kani,4 digits matrame undali
 
