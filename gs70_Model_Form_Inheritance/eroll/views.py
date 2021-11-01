@@ -12,7 +12,7 @@ def student_form(request):
 		fm=StudentRegistration()	
 
 	else:
-		fm = StudentRegistration()
+		fm = StudentRegistration() #html lo ni form lo method="GET" use chesthe ee line execute auvthundi(empty form kanipisthundi 'form lo fill chesina kuda..' )
 
 	return render(request,'eroll/student.html',{'form':fm})	
 

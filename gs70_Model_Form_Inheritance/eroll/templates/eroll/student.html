@@ -5,7 +5,8 @@
 </head>
 <body>
 	<center>
-		<form action =""  method="POST">
+		<form action =""  method="GET"> 
+			<!-- just exmaple ga GET thisukunna ikkada..POST Method kuda thisukunna teacher.html lo Get yela execute auvthundi,POST yela execute auvthundi just idea ravadam kosam.. -->
 			{% csrf_token %}
 			{{form.as_p}}
 			<input type="submit" value="Submit">
