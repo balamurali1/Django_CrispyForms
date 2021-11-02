@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<!-- <style>
+		.success{
+			color: red;
+		}
+	</style> -->
+
+
+	<style>
+		.success{
+			color: green;
+		}
+	</style>
+
+
+	<style>
+		.info{
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<form action="" method="POST"> 
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="" value="Submit">
+		</form>
+		<!-- {% if messages %}
+			{% for message in messages %}
+				{{message}}
+			{% endfor %}	
+		{% endif %} -->	
+
+
+
+		<!-- {% if messages %}
+			{% for message in messages %}
+			{% if message.tags %} {{message.tags}} {% endif %}
+				{{message}}
+			{% endfor %}	
+		{% endif %} -->
+
+
+			
+		<!-- {% if messages %}
+			{% for message in messages %}
+			{% if message.tags %} {{message.tags}} {% endif %}
+				<span class="success">{{message}}</span>
+			{% endfor %}	
+		{% endif %} -->
+
+
+
+		<!-- {% if messages %}
+			{% for message in messages %}
+				<span {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</span>
+			{% endfor %}	
+		{% endif %} -->
+
+
+		{% if messages %}
+			{% for message in messages %}
+				<span {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</span>
+			{% endfor %}	
+		{% endif %}
+
+	</center>
+
+</body>
+</html>
