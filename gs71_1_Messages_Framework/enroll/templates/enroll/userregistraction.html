@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+
+	<style>
+		.info{
+			color: blue;
+			
+		}
+
+		.debug{
+			color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<form action="" method="POST"> 
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="" value="Submit">
+		</form>
+
+		{% if messages %}
+			{% for message in messages %}
+				<span {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</span>
+			{% endfor %}	
+		{% endif %}
+
+	</center>
+
+</body>
+</html>
