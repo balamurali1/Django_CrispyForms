@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+
+	<style>
+		.info{
+			color: blue;
+			
+		}
+
+		.success{
+			color: green;
+		}
+
+		.warning{
+			color: orange;
+		}
+
+		.danger{
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<center>
+		<form action="" method="POST"> 
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" name="" value="Submit">
+		</form>
+
+		{% if messages %}
+			{% for message in messages %}
+				<!-- <span {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</span> -->
+
+				<!-- OR -->
+
+				<p {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</p>
+			{% endfor %}	
+		{% endif %}
+	</center>
+</body>
+</html>
