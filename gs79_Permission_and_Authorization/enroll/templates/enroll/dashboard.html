@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<h1>Dash Board Page</h1>
+	<h2>Welcome {{name}}</h2>
+	
+{% if perms.enroll.delete_blog %}	
+	<input type="button" name="" value="Delete"><br><br>
+{% else %}
+	<h3>No Delete Permission {{name}}</h3>	
+{% endif %}
+
+
+{% if perms.enroll.add_blog %}	
+	<input type="button" name="" value="Add"><br><br>
+{% else %}
+	<h3>No Add Permission {{name}}</h3>	
+{% endif %}	
+
+	<a href="{% url 'logout' %}">Logout</a>
+		
+</body>
+</html>
